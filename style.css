@@ -1,0 +1,114 @@
+*
+
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 12pt;
+	font-family: Arial, sans-serif;
+}
+
+header {
+	background-color: #f2f2f2;
+	padding: 20px;
+}
+
+header h1 {
+	font-size: 36px;
+	margin: 0;
+}
+
+section {
+	padding: 20px;
+}
+
+form {
+	display:flex;
+
+	flex-direction:column;
+	align-items: center;
+}
+
+form > div {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 20px;
+	
+	
+	
+}
+
+form label {
+	font-size: 18px;
+	margin-bottom: 10px;
+	padding-left: 10px;
+	
+}
+
+form input, form button {
+	border: 1px solid #f8cc06;
+	font-size: 18px;
+	padding: 10px;
+	
+	border-radius: 5px;
+	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+	
+}
+
+form input[type="number"] {
+	width: 80px;
+}
+
+#invoice-items {
+	margin-top: 20px;
+}
+
+#invoice-items th, #invoice-items td {
+	padding: 10px;
+	border: 1px solid #ccc;
+	text-align: center;
+}
+
+#add-item {
+	background-color: #007904;
+	color: white;
+	margin-bottom: 20px;
+}
+
+#add-item:hover {
+	background-color: #3E8E41;
+}
+
+
+
+
+.download-button {
+	background-color: #007904;
+	color: white;
+	margin-bottom: 20px;
+	
+}
+
+.download-button:hover {
+	background-color: #3E8E41;
+}
+
+
+
+#total-amount {
+	font-weight: bold;
+	font-size: 24px;
+	color: #018107;
+	text-align: center;
+	margin-top: 20px;
+}
+@page{
+	size: A4;
+	margin: 1in;
+  }
+  .center {
+  text-align: center;
+}
