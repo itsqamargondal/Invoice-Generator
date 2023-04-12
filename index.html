@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Invoice Generator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+	
+
+	<script src="https://cdn.jsdelivr.net/npm/dayjs"></script>
+</head>
+<body>
+	
+
+	  
+	<div class="container">
+		<h1>Create Invoice</h1>
+		<form id="invoice-form" class="main-form">
+
+			<div class="form-firstg">
+			<div >
+				<label for="invoice-number">Invoice Number:</label>
+				<input type="text" id="invoice-number" name="invoice-number" required>
+			</div>
+			<div >
+				<label for="invoice-date">Invoice Date:</label>
+				<input type="date" id="invoice-date" name="invoice-date" required>
+			</div>
+			<div >
+				<label for="delivery-date">Delivery Date:</label>
+				<input type="date" id="delivery-date" name="delivery-date" required>
+			</div>
+			<div>
+			<label for="advance-payment">Advance Payment:</label>
+				<input type="number" id="advance-payment" name="advance-payment">
+			</div>
+			
+		</div>
+	
+
+		<div class="form-firstg">
+			<div class="form-group">
+				<label for="client-name">Client Name:</label>
+				<input type="text" id="client-name" name="client-name" required>
+			</div>
+			<div class="form-group">
+				<label for="client-email">Client Email:</label>
+				<input type="email" id="client-email" name="client-email" required>
+			</div>
+			<div class="form-group">
+				<label for="client-mobile">Client Mobile:</label>
+				<input type="text" id="client-mobile" name="client-mobile" required>
+			</div>
+			
+		</div>
+
+
+
+		
+		
+
+			
+
+
+			<div class="form-group">
+				<table id="invoice-items">
+					<thead>
+						<tr>
+							<th>Item</th>
+							<th>Quantity</th>
+							<th>Price</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="text" name="item[]" required></td>
+							<td><input type="number" name="quantity[]" min="1" value="1" required></td>
+							<td><input type="number" name="price[]" min="0" step=".01" value="0" required></td>
+							<td><button type="button" class="remove-item">&times;</button></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="form-group">
+				<button type="button" id="add-item">Add Item</button>
+			</div>
+			<div class="form-group">
+				<label for="total-amount">Total Payment:</label>
+				<input type="text" id="total-amount" readonly>
+
+				
+
+
+				<label for="due-payment">Due Payment:</label>
+				<input type="text" id="due-payment" readonly>
+				
+			</div>
+			<div class="form-group">
+				<button type="submit">Generate Invoice</button>
+			</div>
+		</form>
+		<button id="download-btn" class="download-button" download>Download PDF</button>
+</div>
+
+	
+	<div class="social-links">
+		<a href="we.fb.com">Follow us on Facebook</a>
+	</div>
+
+	
+	<div class="company-name">
+		<a href="Pixel Designer">compnay name</a>
+	</div>
+  
+	<div class="company-address">
+		<a href="Lahore Road, Chiniot, Punjab PK">compnay name</a>
+	</div>
+	<div class="company-phone">
+		<a href="Phone: 03081900528">compnay phone</a>
+	</div>
+
+  
+
+<script src="script.js"></script>
+</body>
+</html>
